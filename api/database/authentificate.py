@@ -90,6 +90,7 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
     return encoded_jwt
 
 async def has_access(token: Annotated[str, Depends(oauth2_scheme)], session: Session = Depends(get_db)):
+    
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",
