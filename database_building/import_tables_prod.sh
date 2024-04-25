@@ -1,10 +1,3 @@
-# # Azure SQL Server credentials
-# server="projet-ok-prod-sqlserver.database.windows.net"
-# database="projet-ok-prod-database"
-# username="adminlogin"
-# password="AdminPassword123!"
-
- 
 # # Path to your CSV file
 # csvFileOrders="/home/utilisateur/Documents/Projets/modele_API_Charles/ml-model-api-template-devops/data/state_name.csv"
 
