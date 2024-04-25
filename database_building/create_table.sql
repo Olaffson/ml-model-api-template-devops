@@ -7,8 +7,6 @@ CREATE TABLE IF NOT EXISTS StateName (
     state_name TEXT 
 );
 
--- .import --csv --skip 1 -v data/state_name.csv StateName
-
 
 -- Create a table for Geolocalisation
 CREATE TABLE IF NOT EXISTS Geolocation (
@@ -19,9 +17,6 @@ CREATE TABLE IF NOT EXISTS Geolocation (
     geolocation_state TEXT,
     FOREIGN KEY (geolocation_state) REFERENCES StateName(state)
 );
-
--- .import --csv --skip 1 -v data/geolocation_dataset.csv Geolocation
-
 
 
 -- Create a table for Customers
@@ -34,7 +29,6 @@ CREATE TABLE IF NOT EXISTS Customers (
     FOREIGN KEY (customer_zip_code_prefix) REFERENCES Geolocation(geolocation_zip_code_prefix)
 );
 
--- .import --csv --skip 1 -v data/customers_dataset.csv Customers
 
 -- Create table Sellers
 CREATE TABLE IF NOT EXISTS Sellers (
@@ -45,7 +39,6 @@ CREATE TABLE IF NOT EXISTS Sellers (
     FOREIGN KEY (seller_zip_code_prefix) REFERENCES Geolocation(geolocation_zip_code_prefix)
 );
 
--- .import --csv --skip 1 -v data/sellers_dataset.csv Sellers
 
 -- Create table Orders
 CREATE TABLE IF NOT EXISTS Orders (
@@ -60,17 +53,12 @@ CREATE TABLE IF NOT EXISTS Orders (
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 
--- .import --csv --skip 1 -v data/orders_dataset.csv Orders
-
-
 
 -- Create table ProductCategoryName
 CREATE TABLE IF NOT EXISTS ProductCategoryName (
     product_category_name TEXT PRIMARY KEY,
     product_category_name_english TEXT 
 );
-
--- .import --csv --skip 1 -v data/product_category_name_translation.csv ProductCategoryName
 
 
 -- Create table Products
@@ -86,10 +74,6 @@ CREATE TABLE IF NOT EXISTS Products (
     product_width_cm INTEGER,
     FOREIGN KEY (product_category_name) REFERENCES ProductCategoryName(product_category_name)
 );
-
--- .import --csv --skip 1 -v data/products_dataset.csv Products
-
-
 
 
 -- Create table Order_items
@@ -107,7 +91,16 @@ CREATE TABLE IF NOT EXISTS OrderItem (
     FOREIGN KEY (product_id) REFERENCES Products(product_id)
 );
 
+
+
 -- .import --csv --skip 1 -v data/order_items_dataset.csv OrderItem
+-- .import --csv --skip 1 -v data/state_name.csv StateName
+-- .import --csv --skip 1 -v data/geolocation_dataset.csv Geolocation
+-- .import --csv --skip 1 -v data/customers_dataset.csv Customers
+-- .import --csv --skip 1 -v data/sellers_dataset.csv Sellers
+-- .import --csv --skip 1 -v data/orders_dataset.csv Orders
+-- .import --csv --skip 1 -v data/product_category_name_translation.csv ProductCategoryName
+-- .import --csv --skip 1 -v data/products_dataset.csv Products
 
 
 

@@ -1,0 +1,54 @@
+name: Database Deployment Workflow
+
+on:
+    workflow_dispatch:
+        inputs:
+            branch:
+                description: 'main'
+                required: true
+                default: 'main'
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        run: |
+          cd terraform
+          terraform init
+
+      - name: Terraform Plan
+        run: |
+          cd terraform
+          terraform plan
+
+      - name: Terraform Apply
+        run: |
+          cd terraform
+          terraform apply --auto-approve
+
+  database_building:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Execute create_tables_prod.sh
+        run: |
+          cd database_building
+          chmod +x create_tables_prod.sh
+          ./create_tables_prod.sh
+
+      - name: Execute import_tables_prod.sh
+        run: |
+          cd database_building
+          chmod +x import_tables_prod.sh
+          ./import_tables_prod.sh

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/utilisateur/Documents/Projets/modele%20API%20Charles/ml-model-api-template-devops/model/mlruns/0/48d80d29087a4404ac9e2b7420a5e1bc/artifacts
+end_time: 1713880216111
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 48d80d29087a4404ac9e2b7420a5e1bc
+run_name: grandiose-rat-662
+run_uuid: 48d80d29087a4404ac9e2b7420a5e1bc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713880210907
+status: 3
+tags: []
+user_id: utilisateur

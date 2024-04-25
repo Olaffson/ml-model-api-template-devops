@@ -4,6 +4,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import recall_score, accuracy_score, f1_score
 import pickle
+import onnxmltools
+from onnxmltools.convert import convert_sklearn
+from skl2onnx.common.data_types import FloatTensorType
+
 
 connection = sqlite3.connect("olist.db")
 

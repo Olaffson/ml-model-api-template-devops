@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/453223784642083118/017265745c6445f49d403ee4ff926322/artifacts
+end_time: 1713884357236
+entry_point_name: ''
+experiment_id: '453223784642083118'
+lifecycle_stage: active
+run_id: 017265745c6445f49d403ee4ff926322
+run_name: nosy-lynx-275
+run_uuid: 017265745c6445f49d403ee4ff926322
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713884354419
+status: 3
+tags: []
+user_id: utilisateur

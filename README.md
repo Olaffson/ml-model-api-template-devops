@@ -42,6 +42,8 @@ In the api folder, create a .env file with a SECRET_KEY variable
 
 ```bash
 pytest
+
+pytest --cov=utils
 ```
 
 5. Launch the API from the api folder:
@@ -58,6 +60,21 @@ python3 api/main.py
 - Create a User with a password and a username
 - Authorize with the created user
 - You can now use the protected endpoints
+
+7. Use Terraform to manage the Azure's ressources:
+
+- to create the Azure's ressources, go /terraform
+```bash
+terraform init
+
+terraform plan
+
+terraform apply
+```
+- to destroy the Azure's ressources, go /terraform
+```bash
+terraform destroy
+```
 
 ## Ressources:
 

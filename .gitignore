@@ -1,5 +1,6 @@
-olist.db
+*.db
 ml_models/*.pkl
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

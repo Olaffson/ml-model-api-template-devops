@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/453223784642083118/c4078705ac81463dba32d28d20bd3935/artifacts
+end_time: 1713882882584
+entry_point_name: ''
+experiment_id: '453223784642083118'
+lifecycle_stage: active
+run_id: c4078705ac81463dba32d28d20bd3935
+run_name: dapper-croc-569
+run_uuid: c4078705ac81463dba32d28d20bd3935
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713882879520
+status: 3
+tags: []
+user_id: utilisateur

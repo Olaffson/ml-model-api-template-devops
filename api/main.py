@@ -1,6 +1,8 @@
 from fastapi import FastAPI, APIRouter
-from api.routers.prediction import router as prediction_router, train
+from routers.prediction import router as prediction_router, train_model
 from routers.authentificate import router as authentificate_router
+from starlette.responses import RedirectResponse
+
 
 test_router = APIRouter()
 
@@ -12,7 +14,8 @@ app.include_router(authentificate_router)
 
 @app.get("/")
 def read_root():
-    return "Server is running."
+    # return "Server is running."
+    return RedirectResponse(url='/docs')
 
 
 if __name__ == "__main__":

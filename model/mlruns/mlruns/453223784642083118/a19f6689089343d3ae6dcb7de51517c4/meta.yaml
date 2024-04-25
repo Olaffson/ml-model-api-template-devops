@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/453223784642083118/a19f6689089343d3ae6dcb7de51517c4/artifacts
+end_time: 1713884234461
+entry_point_name: ''
+experiment_id: '453223784642083118'
+lifecycle_stage: active
+run_id: a19f6689089343d3ae6dcb7de51517c4
+run_name: silent-shrew-318
+run_uuid: a19f6689089343d3ae6dcb7de51517c4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713884231574
+status: 3
+tags: []
+user_id: utilisateur

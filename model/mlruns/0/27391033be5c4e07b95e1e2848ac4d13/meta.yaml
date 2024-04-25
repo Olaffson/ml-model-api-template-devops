@@ -1,0 +1,15 @@
+artifact_uri: file:///home/utilisateur/Documents/Projets/modele%20API%20Charles/ml-model-api-template-devops/model/mlruns/0/27391033be5c4e07b95e1e2848ac4d13/artifacts
+end_time: 1713879767660
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 27391033be5c4e07b95e1e2848ac4d13
+run_name: gifted-snipe-390
+run_uuid: 27391033be5c4e07b95e1e2848ac4d13
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713879764269
+status: 3
+tags: []
+user_id: utilisateur

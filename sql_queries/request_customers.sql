@@ -10,7 +10,7 @@ FROM Customers;
 
 SELECT COUNT(DISTINCT customer_city) AS unique_city_count
 FROM Customers
-WHERE customer_state ="SP" ;
+WHERE customer_state ="SP";
 
 -- 629
 
@@ -22,8 +22,7 @@ WHERE customer_id IS NULL OR
       customer_unique_id IS NULL OR 
       customer_zip_code_prefix IS NULL OR
       customer_city IS NULL OR
-      customer_state IS NULL
-      ;
+      customer_state IS NULL;
 
 -- 0
 
@@ -58,7 +57,7 @@ SELECT COUNT(*) FROM(
 SELECT customer_state , COUNT(DISTINCT customer_unique_id) as nb_client
 FROM CUSTOMERS
 GROUP BY customer_state
-ORDER BY nb_client DESC
+ORDER BY nb_client DESC;
 
 
 -- SP|40302
