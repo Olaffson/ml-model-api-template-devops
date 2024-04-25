@@ -132,6 +132,10 @@ ENV/
 env.bak/
 venv.bak/
 
+# terraform
+.terraform
+.tfstate
+
 # Spyder project settings
 .spyderproject
 .spyproject
